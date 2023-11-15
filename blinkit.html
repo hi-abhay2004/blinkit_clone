@@ -1,64 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        body{
+        @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto&display=swap');
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0%;
             padding: 0%;
+
         }
-        nav{
-            display: flex;
-            flex-direction: row;
-            background-color: yellow;
-            
-    
+
+        nav {
+            height: 90px;
+            width: 100%;
+            border-bottom: 1px solid black;
         }
-        nav h3 a{
-            padding: 3px 30px;
+
+        nav img {
+            height: 160px;
+            width: 180px;
+            mix-blend-mode: multiply;
+            filter: contrast(1);
+            position: absolute;
+            top: -38px;
+            left: 2%;
+
         }
-        nav h3 a{
-            @media screen {
-                padding: 3px 15px;
-            }
-        }
-        #one ,#two,#three,#four{
-            height: 200px;
-            width: 320px;
-            border: 2px solid black;
+
+        nav #location {
+            position: relative;
+
+            left: 240px;
             display: inline-block;
-            margin: 25px;
-            
         }
-        #one img{
-            height: 226px;
-            width: 320px;
-            position: relative;
-            top: 30px;
+
+        nav #location h5 {
+            margin: -15px 0px;
+            font-weight: 400;
+
+
         }
-        #two img{
-            height: 226px;
-            width: 320px;
-            position: relative;
-            /* top: 30px; */
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        #search {
+            position: absolute;
+            top: 3%;
+            left: 34%;
+            width: 40%;
+            height: 6%;
+            border: 1px solid gray;
+            border-radius: 7px;
+            background-image: url(./blinkit/loupe.png);
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: 97%;
+
+
+
+        }
+
+        nav #search::placeholder {
+            font-size: 18px;
+            padding-left: 10px;
+        }
+
+        nav #login {
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            top: 3%;
+            right: 15%;
+            font-size: 20px;
+            border: none;
+            background-color: white;
+        }
+
+        nav #cart {
+            width: 100px;
+            height: 45px;
+            position: absolute;
+            top: 3%;
+            right: 5%;
+            font-size: 20px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            background-color: rgb(19, 138, 19);
+        }
+
+        .f-top,
+        #offer {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            border: 1px solid black;
+
+        }
+
+        .f-top #one {
+            width: 100%;
+        }
+
+        #offer img {
+            width: 279px;
+            height: 173px;
+            padding: 10px;
+
         }
     </style>
-</head>
+
+
 <body>
     <nav>
-        <h3><a href="#">HOME</a></h3>
-        <h3><a href="#">Fashion</a></h3>
-        <h3><a href="#">Appliences</a></h3>
-        <h3><a href="#">Electronics</a></h3>
-        <h3><a href="#">About</a></h3>
+        <img src="./blinkit/bl_logo_web.webp" alt="">
+        <div id="location">
+            <h2>Deliver in 8 minutes</h2>
+            <h5>NGR Layout , LA <i class="arrow down"></i></h5>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="search" placeholder="What Your looking for">
+        <input type="button" value="Login" id="login">
+        <input type="button" value="My Cart" id="cart">
+
     </nav>
-    <div>
-        <div id="one"><img src="./img/Daco_6140061.png" alt=""></div>
-        <div id="two"><img src="./img/nathan-dumlao-jlf9QyI250Y-unsplash.jpg" alt=""></div>
-        <div id="three"></div>
-        <div id="four"></div>
+    <div class="f-top">
+        <img src="./blinkit/Group-33704.jpg" alt="" id="one">
+    </div>
+    <div id="offer">
+        <a href="WWW.google.com"><img src="./blinkit/WImported-grocery-banner_WEB.jpg" alt=""></a>
+        <a href="WWW.google.com"><img src="./blinkit/pharmacy-WEB.jpg" alt=""></a>
+            <a href="WWW.google.com"><img src="./blinkit/print_crystal_WEB_0.jpg" alt=""></a>
+        <a href="WWW.google.com"><img src="./blinkit/Web-banner-World-Cup_-1.png" alt=""></a>
     </div>
 </body>
+
 </html>
